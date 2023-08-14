@@ -1,6 +1,10 @@
 ### Product Management Microservices Server
 
-#### Entities and Relationships:
+## ER Diagram
+
+<img src="https://i.ibb.co/qy6MjY5/er-products-drawio-1.png" alt="ER Diagram"></img>
+
+#### Entities
 
 - Product
 
@@ -64,10 +68,6 @@
   - rating
   - review_text
   - review_date
-
-## ER Diagram
-
-<img src="https://i.ibb.co/qy6MjY5/er-products-drawio-1.png" alt="ER Diagram"></img>
 
 ## Features
 
