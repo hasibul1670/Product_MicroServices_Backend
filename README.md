@@ -1,7 +1,46 @@
+### Product Management Microservices Server
 
-Welcome to the Summer Camp School project [SERVER]! This is an e-learning website that provides a platform for organizing and managing summer camp activities and courses online. It offers a range of features for administrators, instructors, and students to enhance the summer camp learning experience.
+#### Entities and Relationships:
+
+ - Product
+   - product_id (Primary Key)
+   - product_name,
+   - description, 
+   - category_id (Foreign Key),
+   - manufacturer_id (Foreign Key),
+   - price, 
+   - creation_date, 
+   - last_updated  
+
+ - Category
+   - category_id (Primary Key),
+   - category_name,
+   - slug
+   
+ - Manufacturer
+   - manufacturer_id (Primary Key),
+   - manufacturer_name,
+   - address,
+   - contact_info
+
+ - Inventory
+   - inventory_id (Primary Key),
+   - product_id (Foreign Key), 
+   - quantity
+   - location, 
+   
+ - Color
+  - color_id (Primary Key), 
+  - color_name,
+  - color_code
+
+ - ApparelSize
+  - size_id (Primary Key),
+  - name 
+  - code
 
 
+  
 
 ## ER Diagram
 <img src="https://i.ibb.co/2YWQMNS/download.png" alt="ER Diagram"></img>
