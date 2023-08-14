@@ -26,18 +26,34 @@
  - Inventory
    - inventory_id (Primary Key),
    - product_id (Foreign Key), 
-   - quantity
-   - location, 
-   
+   - quantity,
+   - location,
+
  - Color
   - color_id (Primary Key), 
   - color_name,
-  - color_code
+  - color_code,
 
  - ApparelSize
   - size_id (Primary Key),
   - name 
-  - code
+  - code,
+
+ - Customer
+  - customer_id (Primary Key),
+  - first_name 
+  - last_name 
+  - email
+  - address
+  - contact_no 
+
+ - Review
+  - review_id (Primary Key),
+  - product_id (Foreign Key),
+  - customer_id (Foreign Key), 
+  - rating
+  - review_text
+  - review_date 
 
 
   
