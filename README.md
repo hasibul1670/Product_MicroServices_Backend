@@ -1,6 +1,13 @@
 
 Welcome to the Summer Camp School project [SERVER]! This is an e-learning website that provides a platform for organizing and managing summer camp activities and courses online. It offers a range of features for administrators, instructors, and students to enhance the summer camp learning experience.
 
+
+
+## ER Diagram
+<img src="https://i.ibb.co/2YWQMNS/download.png" alt="ER Diagram"></img>
+
+
+
 ## Features
 
 - User authentication and authorization
