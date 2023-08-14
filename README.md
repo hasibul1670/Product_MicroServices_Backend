@@ -82,7 +82,7 @@
 ## Technologies Used
 
 - Backend: Node.js, Express.js,Typescript
-- Database: MongoDB
+- Database: PostgreSQL
 - Deployment: Vercel
 - Authentication: JWT
 - Packages Used: bcrypt,http-errors,http-status-codes,zod
@@ -93,11 +93,9 @@ If you have any questions, feel free to reach out to us:
 - Website: https://client-summer-school.vercel.app/
 - GitHub: https://github.com/hasibul1670
 
-#### Summer Camp School project
-
 ### Live Link(vercel): https://summer-camp-school-server-sigma.vercel.app
 
-### Application Routes:
+<!-- ### Application Routes:
 
 #### student
 
@@ -124,78 +122,4 @@ If you have any questions, feel free to reach out to us:
 #### Login
 
 - https://summer-camp-school-server-sigma.vercel.app/api/v1/auth/login [Login] (POST)
-- https://summer-camp-school-server-sigma.vercel.app/api/v1/auth/change-password (POST)
-
-### Sample courses Data for create a courses
-
-```json
-{
-  "title": "Introduction to Python",
-  "year": "2023",
-  "startMonth": "January",
-  "endMonth": "March"
-}
-```
-
-### Sample courses Data for create a Student
-
-```json
-{
-  "name": {
-    "firstName": "luka",
-    "lastName": "Doe48"
-  },
-  "gender": "male",
-  "role": "student",
-  "dateOfBirth": "1990-01-01",
-  "email": "luka@gmail.com",
-  "contactNo": "1234567890",
-  "address": "123 Main St, City"
-}
-```
-
-### Sample courses Data for create an instructor
-
-```json
-{
-  "role": "instructor",
-  "email": "john@example.com",
-  "name": {
-    "firstName": "John",
-    "lastName": "Doe"
-  },
-  "phoneNumber": "123-456-7890",
-  "address": "123 Main Street",
-  "expertise": "Computer Science",
-  "course": "64972c9866bfd19bfa9c412b"
-}
-```
-
-### Sample courses Order Data to create a Order
-
-```json
-{
-  "courses": "648dbe893f8caeacd1d92178",
-  "student": "648dbdd53f8caeacd1d92154"
-}
-```
-
-### Password Chnage Data Sample
-
-```json
-{
-  "oldPassword": "110330",
-  "newPassword": "110220"
-}
-```
-
-### Login Data Sample (POST)[POST]
-
-```json
-{
-  "password": "110220",
-  "email": "rika@gmail.com"
-}
-```
-
-# Product_MicroServices_Backend
+- https://summer-camp-school-server-sigma.vercel.app/api/v1/auth/change-password (POST) -->
