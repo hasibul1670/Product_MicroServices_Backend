@@ -15,10 +15,29 @@ model Product {
   description String
   category_id Int
   manufacturer_id Int
+  inventory_id Int
+  manufacturer Manufacturer @relation(fields: [manufacturer_id], references: [manufacturer_id])
+  inventory Inventory @relation(fields: [inventory_id], references: [inventory_id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  
+  color ProductColor[]
+  product Review[]
+
+}
+
+model Review{
+  review_id Int @id @default(autoincrement())
+  product_id  Int
+  customer_id Int
+  rating Int
+  product Product @relation(fields: [product_id],references: [product_id])
+  customer Customer @relation(fields: [customer_id],references: [customer_id])
+  review_text String
+  review_date  DateTime @default(now())
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
-
 model Category{
   category_id Int @id @default(autoincrement())
   categoy_name  String
@@ -33,28 +52,45 @@ model Customer{
   last_name String
   email String
   address String
+  customer Review[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+
+model ProductColor{
+  product_id Int @id
+  color_id Int
+  product  Product  @relation(fields:[product_id],references: [product_id])
+  color Color @relation(fields:[color_id],references: [color_id])
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
 
 model Color{
   color_id Int @id @default(autoincrement())
-color_name String
-color_code String
+  color_name String
+  color_code String
+  products ProductColor[]
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
-model ProductColor{
-product_id Int @id
-color_id Int
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-}
+
 model Inventory{
   inventory_id Int @id @default(autoincrement())
   product_id Int
   quantity Int
   location String
+  products Product[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+model Manufacturer{
+  manufacturer_id Int @id @default(autoincrement())
+  manufacturer_name String
+  address String
+  contact_no String
+  products Product[]
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
