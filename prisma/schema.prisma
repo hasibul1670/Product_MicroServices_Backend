@@ -18,11 +18,12 @@ model Product {
   inventory_id Int
   manufacturer Manufacturer @relation(fields: [manufacturer_id], references: [manufacturer_id])
   inventory Inventory @relation(fields: [inventory_id], references: [inventory_id])
+  categories Category @relation(fields: [category_id], references: [category_id])
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
   
   color ProductColor[]
-  product Review[]
+  products Review[]
 
 }
 
@@ -31,8 +32,8 @@ model Review{
   product_id  Int
   customer_id Int
   rating Int
-  product Product @relation(fields: [product_id],references: [product_id])
-  customer Customer @relation(fields: [customer_id],references: [customer_id])
+  products Product @relation(fields: [product_id],references: [product_id])
+  customers Customer @relation(fields: [customer_id],references: [customer_id])
   review_text String
   review_date  DateTime @default(now())
   createdAt  DateTime @default(now())
@@ -42,6 +43,7 @@ model Category{
   category_id Int @id @default(autoincrement())
   categoy_name  String
   slug String
+  categories Product[]
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
@@ -52,7 +54,7 @@ model Customer{
   last_name String
   email String
   address String
-  customer Review[]
+  customers Review[]
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
@@ -71,7 +73,7 @@ model Color{
   color_id Int @id @default(autoincrement())
   color_name String
   color_code String
-  products ProductColor[]
+  color ProductColor[]
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
