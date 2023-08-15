@@ -2,7 +2,7 @@
 
 ## ER Diagram
 
-<img src="https://i.ibb.co/qy6MjY5/er-products-drawio-1.png" alt="ER Diagram"></img>
+<img src="https://i.ibb.co/5LyJs6s/er-products-drawio-1-drawio.png" alt="ER Diagram"></img>
 
 #### Entities
 

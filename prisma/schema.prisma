@@ -9,10 +9,54 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
-model Apparel_Size{
-  
+model Product {
+  product_id Int @id @default(autoincrement())
+  product_name String
+  description String
+  category_id Int
+  manufacturer_id Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 }
 
+model Category{
+  category_id Int @id @default(autoincrement())
+  categoy_name  String
+  slug String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
 
+model Customer{
+  customer_id Int @id @default(autoincrement())
+  first_name String
+  last_name String
+  email String
+  address String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
 
+model Color{
+  color_id Int @id @default(autoincrement())
+color_name String
+color_code String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+model ProductColor{
+product_id Int @id
+color_id Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+model Inventory{
+  inventory_id Int @id @default(autoincrement())
+  product_id Int
+  quantity Int
+  location String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+ 
